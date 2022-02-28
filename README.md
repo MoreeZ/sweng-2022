@@ -11,3 +11,19 @@ We take any regression or classification use case and do our predictions. This i
 - Eligijus Skersonas 
 - Tianze Zhang
 - Shohinabonu Shamshodova 
+
+## Prerequisites:
+
+### Method 1
+#### Download Node.js
+https://nodejs.org/en/download/
+
+### Method 2
+#### run shellscript
+bash installmac.sh for macOS
+TO DO: ??? for Windows
+
+
+## How to run:
+Navigate to sweng-2022 directory and run the command:
+npm start
