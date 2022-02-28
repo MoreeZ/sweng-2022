@@ -23,35 +23,16 @@ class Features extends Component {
   render() {
     return (
       <React.Fragment className="bg-primary">
-        {this.renderHeader()}
-        {this.renderInputs()}
-        <h2 style={this.centreContent}>Graph to be implemented</h2>
-        <p style={this.centreContent}>
-          Note: Graph will automatically adjust to each input
-        </p>
+        {this.renderForm()}
       </React.Fragment>
     );
   }
 
-  renderHeader() {
-    return (
-      <div
-        style={{
-          fontSize: 40,
-          ...this.centreContent,
-        }}
-        className="bg-primary text-white"
-      >
-        House Price Predictor
-      </div>
-    );
-  }
-
-  renderInputs() {
-    const margin = "m-5";
+  renderForm() {
+    const margin = "m-4";
 
     return (
-      <React.Fragment>
+      <form>
         <input
           type="text"
           placeholder="Tax Amount"
@@ -77,7 +58,8 @@ class Features extends Component {
           className={margin}
         />
         <input type="text" placeholder="Area" name="area" className={margin} />
-      </React.Fragment>
+        <input type="submit" value="Predict" className={margin} />
+      </form>
     );
   }
 }

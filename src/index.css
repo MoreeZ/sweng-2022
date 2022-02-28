@@ -8,10 +8,17 @@ body {
 }
 
 input {
+  display: inline-block;
+  width: 180px;
   border: 2px solid rgb(6, 110, 196);
   border-radius: 16px;
   padding: 16px 0px;
   text-align: center;
+}
+
+input[type="submit"] {
+  color: white;
+  background-color: rgb(6, 110, 196);
 }
 
 code {
