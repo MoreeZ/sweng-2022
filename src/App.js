@@ -1,14 +1,10 @@
-import Features from "./components/features";
-import Header from "./components/header";
-import Graph from "./components/graph";
+import Home from "./components/home";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Features />
-      <Graph />
+      <Home />
     </div>
   );
 }
