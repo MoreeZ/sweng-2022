@@ -15,7 +15,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        {console.log(this.state)}
         <Header />
         <Features sendState={(state) => this.setState(state)} />
         <BarChart state={this.state} />

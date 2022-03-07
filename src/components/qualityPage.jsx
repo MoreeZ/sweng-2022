@@ -1,7 +1,13 @@
 import React, { Component } from "react";
+import Header from "./header";
+
 class Quality extends Component {
   render() {
-    return <p>Hello World</p>;
+    return (
+      <>
+        <Header />
+      </>
+    );
   }
 }
 
