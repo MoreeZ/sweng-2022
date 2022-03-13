@@ -1,2 +1,2 @@
 Backend file:
-Missing valuefile -> Data transformation -> mutilcollineaity file -> feature selection
+Missing valuefile -> Data transformation -> mutilcollineaity file -> feature selection ->Ridge regression model (TBC)
