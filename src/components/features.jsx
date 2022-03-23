@@ -13,7 +13,6 @@ class Features extends Component {
     area: 1476,
   };
 
-
   centreContent = {
     display: "flex",
     justifyContent: "center",
@@ -42,7 +41,7 @@ class Features extends Component {
 
   renderForm() {
     const inputClass = "form-control rounded-pill";
-    const submitClass = "form-control rounded-pill bg-primary";
+    const submitClass = "form-control rounded-pill bg-dark";
     const submitStyle = { color: "white" };
 
     return (
