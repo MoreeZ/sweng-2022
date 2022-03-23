@@ -13,9 +13,6 @@ class Features extends Component {
     area: 1476,
   };
 
-  constructor(props) {
-    super(props);
-  }
 
   centreContent = {
     display: "flex",

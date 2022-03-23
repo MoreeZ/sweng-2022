@@ -1,11 +1,27 @@
-import Home from "./components/home";
 import "./App.css";
+
+import {BrowserRouter as Router} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
+
+
+import Quality from './components/qualityPage';
+import Footer from './components/footer';
+import Header from './components/header';
+import Home from './components/home';
+import {Container} from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Header/>
+        <Container>
+          <Routes>
+            <Route path="quality-page/*" element={<Quality/>}/>
+            <Route path="/" element={<Home/>}/>
+          </Routes>
+        </Container>
+        <Footer/>
+  </Router>
   );
 }
 

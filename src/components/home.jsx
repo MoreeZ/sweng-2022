@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "./header";
 import Features from "./features";
 import BarChart from "./graph";
 
@@ -15,7 +14,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Header />
         <Features sendState={(state) => this.setState(state)} />
         <BarChart state={this.state} />
       </>
