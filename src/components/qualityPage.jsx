@@ -1,15 +1,69 @@
 import React, { Component } from "react";
-import {Container} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import QualityInfo from './QualityInfo.jsx';
+
+import featureSelection from '../images/FeatureSelectionResults.png';
+import logerrorFitted from '../images/Fitted_graph.png';
+import meanSqErr from '../images/mean_square_error.png';
+import L1Explanation from '../images/L1Explanation.jpg';
+import QQplot from '../images/QQPlot.png';
 
 class Quality extends Component {
   render() {
     return (
-      <>
-        <Container className="text-center">
-          <h1>Quality Page Under Construction, here is a cat instead!</h1>
-          <img src="https://www.petsittersireland.com/wp-content/uploads/2018/02/Ragdoll-Cat-Blue-Eyes.jpg" alt="Cat"></img>
-        </Container>
-      </>
+      <Container className="text-center" fluid>
+        <Row style={{ marginTop: "50px" }}>
+          <Col >
+            <QualityInfo title={"Basic Overview"} desc={
+              <>
+                <p>The target audience of the quality page is technical users who have quite abundant statistics knowledge, and these pages give an in-depth overview of each picture. This page has four graphs: feature selection graph, mean square error comparison, log error( target variable) fitted graph ,and Q-Q plot.</p>
+                <p>The biggest competitive of our product is that we have relative competitive metrics in mean square error, and we employed several machine learning approaches in every step of machine learning. The general overview of our machine learning pipeline is as follow: </p>
+                <p>Data exploration &gt;Removal high missing rate features(over 95% missing rate) -&gt; Imputation of the rest features via K nearest neighbour imputation -&gt; Feature selection via random forest -&gt; Regression analysis -&gt; Multicollinearity analysis via Variance inflation factor -&gt; Ridge regression -&gt; Evolution of selected model -&gt; Visualization .</p>
+              </>
+            } image={null} />
+          </Col>
+          <Col>
+            <QualityInfo title={"QQ Plot"} desc={`From our graph, it is obvious to discover that the shape of data is in S shape which follows the property of over-dispersed data. Over-dispersed data has an increased number of outlier since in real life. Most house buyers have conformity when they are not paired with real-estate market.`} image={QQplot} />
+          </Col>
+        </Row>
+        <Row className="justify-content-space-evenly" style={{ marginTop: "50px" }}>
+          <Col>
+            <QualityInfo title={"Log-error"} desc={"This graph is the fit graph on the test dataset for log error , and from this graph, we could discover that most of the original data fall in the canter collectively and both sides of the upper and lower bound separately. Since from the previous Q-Q plot, we know the original data is over-disperse data. Hence the fit line is not the standard straight line as well."} image={logerrorFitted} />
+          </Col>
+          <Col>
+            <QualityInfo title={"Mean-square error"} desc={
+              <>
+                <p>The most competitive point of our product is our mean squared error, and here is a brief introduction of mean square error.
+                  <p>A regression line's mean squared error (MSE) indicates how near it is to a collection of points. It accomplishes this by squaring the distances between the points and the regression line (the "errors"). Squaring is required to remove any negative signals. More significant discrepancies are likewise given greater weight. Because machine learning models calculate the average of a series of mistakes, it has termed the mean squared error: the lower the MSE, the more accurate the forecast.</p>
+                  <p>We utilize ridge regression to construct our model to eliminate multicollinearity to a degree. The following graph is our result of mean squared error.</p>
+                  <p>The most important point is that we compared with most of the online published results for this competition, finding that most results fall in the range from 0.01 to 0.06. Via this comparison, our product has relatively accuracy of predictability.</p></p>
+              </>
+            } image={meanSqErr} />
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "50px" }}>
+          <Col>
+            <QualityInfo title={"Feature Selection"} image={L1Explanation} desc={
+              <>
+                <p>The performance of Lasso for feature selection is not good as the relationship between the features, and the target variable is not linear. In our dataset, several features have the property of multicollinearity with each other. The following picture is a brief analysis from the perspective of convex optimization.</p>
+                <p>In our dataset, several features have the property of multicollinearity with each other, and if we chose lasso as feature selection, it would flatten most of the feature into zero since the optimization of the lasso is based on absolute value on ordinary least squares.</p>
+                <p>The circle is the contour line of the L1 regularization search space after constraint; the Rhombus is the search space. This is the general explanation. It is straightforward to have an intersection between two shapes.</p>
+              </>
+            } image2={featureSelection} desc2={
+              <>
+                <p>Based on the feature important graph and real-life meaning consideration, we choose the five features as our final features to predict the house price and log error.</p>
+                <ul className="text-start">
+                  <li>'taxamount'	:The total property tax assessed for that assessment year</li>
+                  <li>'finishedsquarefeet12' :	Finished living area</li>
+                  <li>'bathroomcnt :Number of bathrooms in home including fractional bathrooms</li>
+                  <li>'bedroomcnt' :	 Number of bedrooms in home</li>
+                  <li>'yearbuilt'	: The Year the principal residence was built</li>
+                </ul>
+              </>
+            }/>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
