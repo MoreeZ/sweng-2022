@@ -1,7 +1,9 @@
 import React, { Component, text } from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 
-
+// The QualityInfo component takes in the props
+// title, desc, image and optional desc2 image2
+// which will divide the component into 2 columns if present.
 class Quality extends Component {
   render() {
     return (

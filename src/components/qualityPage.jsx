@@ -8,6 +8,11 @@ import meanSqErr from '../images/mean_square_error.png';
 import L1Explanation from '../images/L1Explanation.jpg';
 import QQplot from '../images/QQPlot.png';
 
+// The following component contains the contents  of the quality page.
+// The component is divided into 3 rows. First two rows have 2 columns.
+// Last row has one column. The columns contain the QualityInfo component
+// which takes in the props title, desc, image and optional desc2 image2
+// which will divide the component into 2 columns. (implemented in last row)
 class Quality extends Component {
   render() {
     return (
