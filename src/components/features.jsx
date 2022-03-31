@@ -32,16 +32,17 @@ class Features extends Component {
   }
 
   handleSubmit = (e) => {
-    this.validateNumberOnlyString("noOfBedrooms");
-    this.validateNumberOnlyString("yearBuilt");
-    this.validateNumberOnlyString("taxAmount");
-    this.validateNumberOnlyString("noOfBathrooms");
-    this.validateNumberOnlyString("area");
+    const numberOnlyRegex = /^[0-9]*\.?[0-9]*$/;
+    const numbersOnlyString = "Numbers only allowed.";
+    this.validateString("noOfBedrooms", numberOnlyRegex, numbersOnlyString);
+    this.validateString("yearBuilt", numberOnlyRegex, numbersOnlyString);
+    this.validateString("taxAmount", numberOnlyRegex, numbersOnlyString);
+    this.validateString("noOfBathrooms", numberOnlyRegex, numbersOnlyString);
+    this.validateString("area", numberOnlyRegex, numbersOnlyString);
   }
 
-  validateNumberOnlyString = (property) => {
-    var rgx = /^[0-9]*\.?[0-9]*$/;
-    const errorMsg = "Numbers only.";
+  // Function takes in the property, a regular expression and error message
+  validateString = (property, rgx, errorMsg) => {
     // if error
     if (!this.state[property].match(rgx)){
       // and error not yet recorder
@@ -76,7 +77,6 @@ class Features extends Component {
   };
 
   renderForm() {
-    const inputClass = "form-control rounded-pill ";
     const submitClass = "form-control rounded-pill bg-dark";
     const submitStyle = { color: "white" };
 
