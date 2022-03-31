@@ -15,13 +15,11 @@ function App() {
   return (
     <Router>
       <Header/>
-        <Container>
           <Routes>
             <Route path="/quality-page/" element={<Quality/>}/>
             <Route path="/model/" element={<ModelPage/>}/>
             <Route exact path="/" element={<Home/>}/>
           </Routes>
-        </Container>
         <Footer/>
   </Router>
   );

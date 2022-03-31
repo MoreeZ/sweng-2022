@@ -1,0 +1,35 @@
+.home-container {
+    background-image: url('../images/background.jpg');
+    position: relative;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+
+}
+
+.dark-overlay {
+    background-color: rgba(3, 10, 34, 0.86);
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.home-center-content {
+    z-index: 1 !important;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    text-align: center;
+
+}
+
+.home-center-content p {
+    opacity: 0.7;
+}
