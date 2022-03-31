@@ -6,11 +6,19 @@ import React, { Component } from "react";
 
 class Features extends Component {
   state = {
-    yearBuilt: 1969,
-    taxAmount: 4542.86,
-    noOfBathrooms: 2,
-    noOfBedrooms: 3,
-    area: 1476,
+    yearBuilt: "1969",
+    taxAmount: "4542.86",
+    noOfBathrooms: "2",
+    noOfBedrooms: "3",
+    area: "1476",
+    errors: {
+      yearBuilt: [],
+      taxAmount: [],
+      noOfBathrooms: [],
+      noOfBedrooms: [],
+      area: []    
+    },
+    errorQuantity: 0
   };
 
   centreContent = {
@@ -23,24 +31,52 @@ class Features extends Component {
     return this.renderForm();
   }
 
-  predict(props) {
-    props.sendState(this.state);
+  handleSubmit = (e) => {
+    this.validateNumberOnlyString("noOfBedrooms");
+    this.validateNumberOnlyString("yearBuilt");
+    this.validateNumberOnlyString("taxAmount");
+    this.validateNumberOnlyString("noOfBathrooms");
+    this.validateNumberOnlyString("area");
   }
 
-  getInputValue = (event) => {
-    // show the user input value to console
-    const userValue = parseFloat(event.target.value);
-    const name = event.target.name;
+  validateNumberOnlyString = (property) => {
+    var rgx = /^[0-9]*\.?[0-9]*$/;
+    const errorMsg = "Numbers only.";
+    // if error
+    if (!this.state[property].match(rgx)){
+      // and error not yet recorder
+      if (!this.state.errors[property].find(msg=>msg === errorMsg)) {
+        // record error
+        this.setState({
+          errors:{
+            ...this.state.errors,
+            [property]: [errorMsg, ...this.state.errors[property]]
+          }
+        })
+      }
+      // if no error
+    } else {
+      // and error was recorded
+      if (this.state.errors[property].find(msg=>msg === errorMsg)) {
+        // remove error
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            [property]: this.state.errors[property].filter(msg=>msg !== errorMsg)
+          }
+        })
+      }
+    }
+  }
 
-    if (name === "tax") this.setState({ taxAmount: userValue });
-    else if (name === "nomBed") this.setState({ noOfBedrooms: userValue });
-    else if (name === "nomBath") this.setState({ noOfBathrooms: userValue });
-    else if (name === "area") this.setState({ area: userValue });
-    else if (name === "year") this.setState({ yearBuilt: userValue });
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
   };
 
   renderForm() {
-    const inputClass = "form-control rounded-pill";
+    const inputClass = "form-control rounded-pill ";
     const submitClass = "form-control rounded-pill bg-dark";
     const submitStyle = { color: "white" };
 
@@ -48,53 +84,78 @@ class Features extends Component {
       <div className="row m-4">
         <div className="col">
           <input
-            name="nomBed"
+            name="noOfBedrooms"
             type="text"
-            className={inputClass}
+            className={"form-control rounded-pill" + (this.state.errors.noOfBedrooms.length>0 ? " error-border" : "")}
             placeholder="Number Of Bedrooms"
             aria-label="Number Of Bedrooms"
-            onChange={this.getInputValue}
+            onChange={this.handleChange}
+            value={this.state.noOfBedrooms}
           />
+          {this.state.errors.noOfBedrooms.length > 0 ? (
+            this.state.errors.noOfBedrooms.map((msg)=>(
+              <div className="error-msg">{msg}</div>
+          ))) : null}
         </div>
         <div className="col">
           <input
-            name="nomBath"
+            name="noOfBathrooms"
             type="text"
-            className={inputClass}
+            className={"form-control rounded-pill" + (this.state.errors.noOfBathrooms.length>0 ? " error-border" : "")}
             placeholder="Number Of Bathrooms"
             aria-label="Number Of Bathrooms"
-            onChange={this.getInputValue}
+            onChange={this.handleChange}
+            value={this.state.noOfBathrooms}
           />
+          {this.state.errors.noOfBathrooms.length > 0 ? (
+            this.state.errors.noOfBathrooms.map((msg)=>(
+              <div className="error-msg">{msg}</div>
+          ))) : null}
         </div>
         <div className="col">
           <input
-            name="tax"
+            name="taxAmount"
             type="text"
-            className={inputClass}
+            className={"form-control rounded-pill" + (this.state.errors.taxAmount.length>0 ? " error-border" : "")}
             placeholder="Tax Amount"
             aria-label="Tax Amount"
-            onChange={this.getInputValue}
+            onChange={this.handleChange}
+            value={this.state.taxAmount}
           />
+          {this.state.errors.taxAmount.length > 0 ? (
+            this.state.errors.taxAmount.map((msg)=>(
+              <div className="error-msg">{msg}</div>
+          ))) : null}
         </div>
         <div className="col">
           <input
-            name="year"
+            name="yearBuilt"
             type="text"
-            className={inputClass}
+            className={"form-control rounded-pill" + (this.state.errors.yearBuilt.length>0 ? " error-border" : "")}
             placeholder="Year Built"
             aria-label="Year Built"
-            onChange={this.getInputValue}
+            onChange={this.handleChange}
+            value={this.state.yearBuilt}
           />
+          {this.state.errors.yearBuilt.length > 0 ? (
+            this.state.errors.yearBuilt.map((msg)=>(
+              <div className="error-msg">{msg}</div>
+          ))) : null}
         </div>
         <div className="col">
           <input
             name="area"
             type="text"
-            className={inputClass}
+            className={"form-control rounded-pill" + (this.state.errors.area.length>0 ? " error-border" : "")}
             placeholder="Area"
             aria-label="Area"
-            onChange={this.getInputValue}
+            onChange={this.handleChange}
+            value={this.state.area}
           />
+          {this.state.errors.area.length > 0 ? (
+            this.state.errors.area.map((msg)=>(
+              <div className="error-msg">{msg}</div>
+          ))) : null}
         </div>
         <div className="col">
           <button
@@ -102,7 +163,7 @@ class Features extends Component {
             style={submitStyle}
             className={submitClass}
             aria-label="Predict"
-            onClick={() => this.predict(this.props)}
+            onClick={this.handleSubmit}
           >
             Predict
           </button>
