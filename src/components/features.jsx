@@ -5,30 +5,18 @@
 import React, { Component } from "react";
 
 class Features extends Component {
-  state = {
-    yearBuilt: "1969",
-    taxAmount: "4542.86",
-    noOfBathrooms: "2",
-    noOfBedrooms: "3",
-    area: "1476",
-    errors: {
-      yearBuilt: [],
-      taxAmount: [],
-      noOfBathrooms: [],
-      noOfBedrooms: [],
-      area: []    
-    },
-    errorQuantity: 0
-  };
+    state = {}
 
-  centreContent = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  };
+    componentWillMount() {
+        this.setState(this.props.modelState);
+        console.log(this.props.modelState);
+    }
 
   render() {
+    console.log(this.state);
+
     return this.renderForm();
+    // return null;
   }
 
   handleSubmit = (e) => {
@@ -39,6 +27,10 @@ class Features extends Component {
     this.validateString("taxAmount", numberOnlyRegex, numbersOnlyString);
     this.validateString("noOfBathrooms", numberOnlyRegex, numbersOnlyString);
     this.validateString("area", numberOnlyRegex, numbersOnlyString);
+
+    if(this.state.errorQuantity === 0){
+        this.props.handlePredict(); // BUG HERE
+    }
   }
 
   // Function takes in the property, a regular expression and error message
@@ -52,7 +44,8 @@ class Features extends Component {
           errors:{
             ...this.state.errors,
             [property]: [errorMsg, ...this.state.errors[property]]
-          }
+          },
+          errorQuantity: this.state.errorQuantity+1
         })
       }
       // if no error
@@ -64,8 +57,10 @@ class Features extends Component {
           errors: {
             ...this.state.errors,
             [property]: this.state.errors[property].filter(msg=>msg !== errorMsg)
-          }
+          },
+          errorQuantity: this.state.errorQuantity-1
         })
+        
       }
     }
   }
@@ -93,8 +88,8 @@ class Features extends Component {
             value={this.state.noOfBedrooms}
           />
           {this.state.errors.noOfBedrooms.length > 0 ? (
-            this.state.errors.noOfBedrooms.map((msg)=>(
-              <div className="error-msg">{msg}</div>
+            this.state.errors.noOfBedrooms.map((msg, i)=>(
+              <div key={i} className="error-msg">{msg}</div>
           ))) : null}
         </div>
         <div className="col">
@@ -108,8 +103,8 @@ class Features extends Component {
             value={this.state.noOfBathrooms}
           />
           {this.state.errors.noOfBathrooms.length > 0 ? (
-            this.state.errors.noOfBathrooms.map((msg)=>(
-              <div className="error-msg">{msg}</div>
+            this.state.errors.noOfBathrooms.map((msg, i)=>(
+              <div key={i} className="error-msg">{msg}</div>
           ))) : null}
         </div>
         <div className="col">
@@ -123,8 +118,8 @@ class Features extends Component {
             value={this.state.taxAmount}
           />
           {this.state.errors.taxAmount.length > 0 ? (
-            this.state.errors.taxAmount.map((msg)=>(
-              <div className="error-msg">{msg}</div>
+            this.state.errors.taxAmount.map((msg, i)=>(
+              <div key={i} className="error-msg">{msg}</div>
           ))) : null}
         </div>
         <div className="col">
@@ -138,8 +133,8 @@ class Features extends Component {
             value={this.state.yearBuilt}
           />
           {this.state.errors.yearBuilt.length > 0 ? (
-            this.state.errors.yearBuilt.map((msg)=>(
-              <div className="error-msg">{msg}</div>
+            this.state.errors.yearBuilt.map((msg, i)=>(
+              <div key={i} className="error-msg">{msg}</div>
           ))) : null}
         </div>
         <div className="col">
@@ -153,8 +148,8 @@ class Features extends Component {
             value={this.state.area}
           />
           {this.state.errors.area.length > 0 ? (
-            this.state.errors.area.map((msg)=>(
-              <div className="error-msg">{msg}</div>
+            this.state.errors.area.map((msg, i)=>(
+              <div key={i} className="error-msg">{msg}</div>
           ))) : null}
         </div>
         <div className="col">
