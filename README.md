@@ -1,15 +1,12 @@
 # Software Engineering Group Project 2022
-## Regression/Classification/Deep learning based models.
+## Frontend webpage
+The frontend website was design to run the regression model for sweng-2022
 
-We take any regression or classification use case and do our predictions. This is easier said than done. We need to follow all the assumptions of the algorithm that we use. We need to use various algorithms, stacking models. tons of parameter tunings and model use various model evaluation tests. I personally would go for regression model. Note: In all the models, based on the use case chosen a dashboard needs to be created.
-
-## Group members:
+### Frontend contributors members:
 - Oskar Mroz
-- Aislinn Smyth 
-- Mingwei Shi
+- Aislinn Smyth
+- Eligijus Skersonas
 - Ódhran Mulvihill
-- Eligijus Skersonas 
-- Tianze Zhang
 - Shohinabonu Shamshodova 
 
 ## Technologies used
@@ -23,12 +20,12 @@ We take any regression or classification use case and do our predictions. This i
 
 ## Download and run
 #### Download
-Clone the repository: `git clone https://github.com/MoreeZ/sweng-2022/`
-Navigate to local repository: `cd sweng-2022`
-Retrieve frontend branch: `git checkout frontend`
+1. Clone the repository: `git clone https://github.com/MoreeZ/sweng-2022/` 
+2. Navigate to local repository: `cd sweng-2022` 
+3. Retrieve frontend branch: `git checkout frontend` 
 
 #### Install nodejs packages
-`npm install`
+4. `npm install`
 
 #### Run
-Start the application: `npm start`
+5. Start the application: `npm start`
