@@ -12,18 +12,23 @@ We take any regression or classification use case and do our predictions. This i
 - Tianze Zhang
 - Shohinabonu Shamshodova 
 
-## Prerequisites:
+## Technologies used
+#### Must install to run
+- Node.js - https://nodejs.org/en/download/
+#### Other
+- React - https://reactjs.org/
+- bootstrap - https://react-bootstrap.github.io/
+- create-react-app - https://create-react-app.dev/
+- axios - https://axios-http.com/
 
-### Method 1
-#### Download Node.js
-https://nodejs.org/en/download/
+## Download and run
+#### Download
+Clone the repository: `git clone https://github.com/MoreeZ/sweng-2022/`
+Navigate to local repository: `cd sweng-2022`
+Retrieve frontend branch: `git checkout frontend`
 
-### Method 2
-#### run shellscript
-bash installmac.sh for macOS
-TO DO: ??? for Windows
+#### Install nodejs packages
+`npm install`
 
-
-## How to run:
-Navigate to sweng-2022 directory and run the command:
-npm start
+#### Run
+Start the application: `npm start`
