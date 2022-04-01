@@ -29,7 +29,7 @@ class Features extends Component {
     this.validateString("area", numberOnlyRegex, numbersOnlyString);
 
     if(this.state.errorQuantity === 0){
-        this.props.handlePredict(); // BUG HERE
+        this.props.handlePredict(this.state); // BUG HERE
     }
   }
 
