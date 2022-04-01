@@ -40,7 +40,7 @@ class SecondModel extends Component {
 
   render() {
     return (
-      <div style={{display: "flex", flexDirection: "column", "alignItems": "center"}}>
+      <div style={{display: "flex", flexDirection: "column", "alignItems": "center", minHeight: "80vh"}}>
         <Features modelState={this.state} handlePredict={this.handlePredict} />
         <div style={{ width: 350, padding: 20, backgroundColor: "#212529", borderRadius: 20, color: "white" }}>
           <div style={{ marginBottom: 10 }}>Log error: {this.state.predictData["log error"] ? this.state.predictData["log error"] : null}</div>

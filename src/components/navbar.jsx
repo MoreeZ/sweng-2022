@@ -14,8 +14,11 @@ class NavigationBar extends Component {
                         <Nav.Link href="/">
                             Home
                         </Nav.Link>
-                        <Nav.Link href="/model">
-                            Model
+                        <Nav.Link href="/model1">
+                            Model One
+                        </Nav.Link>
+                        <Nav.Link href="/model2">
+                            Model Two
                         </Nav.Link>
                         <Nav.Link href="/quality-page">
                             Quality Page

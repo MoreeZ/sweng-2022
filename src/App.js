@@ -8,8 +8,8 @@ import Quality from './components/qualityPage';
 import Footer from './components/footer';
 import Header from './components/header';
 import Home from './components/home';
-import ModelPage from './components/modelPage';
-import {Container} from 'react-bootstrap';
+import FirstModel from "./components/firstModel";
+import SecondModel from "./components/secondModel";
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
       <Header/>
           <Routes>
             <Route path="/quality-page/" element={<Quality/>}/>
-            <Route path="/model/" element={<ModelPage/>}/>
+            <Route path="/model1/" element={<FirstModel/>}/>
+            <Route path="/model2/" element={<SecondModel/>}/>
             <Route exact path="/" element={<Home/>}/>
           </Routes>
         <Footer/>
