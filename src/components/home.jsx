@@ -9,6 +9,7 @@ import Peli from "../images/Eli.jpeg"
 import Poskar from "../images/Oskar.jpeg"
 import Paslinn from "../images/aslinn.png"
 import Ptianze from '../images/Tianze.png'
+import Porhan from '../images/serialkiller.jpg'
 
 class Home extends Component {
 
@@ -52,7 +53,7 @@ class Home extends Component {
               <Col>{this.renderTeamMember("Aislinn Smyth", "Frontend Developer & Communication Lead", Paslinn)}</Col>
             </Row>
             <Row>
-              <Col>{this.renderTeamMember("Ódhran Mulvihill", "Backend Developer", null)}</Col>
+              <Col>{this.renderTeamMember("Ódhran Mulvihill", "Backend Developer", Porhan)}</Col>
               <Col>{this.renderTeamMember("Shohinabonu Shamshodova", "Backend Developer", Pshahina)}</Col>
               <Col>{this.renderTeamMember("Oskar Mroz", "Frontend Developer", Poskar)}</Col>
             </Row>
