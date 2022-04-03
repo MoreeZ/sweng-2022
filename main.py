@@ -6,8 +6,21 @@ from fastapi.responses import FileResponse
 from pickle import load
 import pandas as pd
 import math
+from fastapi.middleware.cors import CORSMiddleware
 # Creating FastAPI instance
 app = FastAPI()
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+    "https://predict-houseprice.web.app",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 path = "C:/House-Price-predictor/api-test" 
 
 class request_body(BaseModel):
@@ -25,7 +38,7 @@ class request_body_xgb(BaseModel):
     calculatedfinishedsquarefeet: float
     finishedsquarefeet12:float
     yearbuilt: int
-    structuretaxvaluedollarcnt: float
+    structuretaxvaluedollarcnt: int
     taxamount : float  
     house_price: float
 
