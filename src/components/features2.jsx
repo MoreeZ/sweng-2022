@@ -145,7 +145,7 @@ class Features extends Component {
                 </div>
                 <div className="row m-4">
                     <div className="col">
-                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Finished Living Area</label>
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Gross Living Area</label>
                         <input
                             name="area"
                             type="text"
@@ -193,7 +193,7 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
-                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Total Living Area</label>
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Gross Living Area</label>
                         <input
                             name="calculatedfinishedsquarefeet"
                             type="text"
