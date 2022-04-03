@@ -36,9 +36,9 @@ class Home extends Component {
         <div className="about-project center-cont">
           <div className="about-content">
             <h1>About the project</h1>
-            <p>Aliquid et sint est minus omnis minus aut ullam. Esse nihil voluptatem error architecto. Tenetur quidem ad quod incidunt. Dolor tenetur aspernatur quia facere veniam quos sint. Sint maiores consequatur fugit voluptatem aut modi repellat. Velit dolorem provident qui praesentium quod eum quibusdam omnis.</p>
-            <p>Aliquid et sint est minus omnis minus aut ullam. Esse nihil voluptatem error architecto. Tenetur quidem ad quod incidunt. Dolor tenetur aspernatur quia facere veniam quos sint. Sint maiores consequatur fugit voluptatem aut modi repellat. Velit dolorem provident qui praesentium quod eum quibusdam omnis.</p>
-          </div>
+            <p>The goal of our project is to create a deep machine learning regression model for a particular dataset, in our case we chose the Zillow housing price prediction dataset. Our project must visualise the results of the model’s house price prediction on a dashboard and must allow for user input.</p>
+            <p>A key feature that our client wanted us to have in our project, was two separate graphs. One being the visualisation of the house price prediction, this is aimed at non-technical users, and the other being a model quality page for technical users. The model’s quality page determines the level of accuracy of our regression model. Ultimately, we would anticipate that our project will allow users to get high quality and accurate house price predictions.</p>
+            </div>
         </div>
         <div className="team-members center-cont">
           <div className="members-content">
