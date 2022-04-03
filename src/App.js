@@ -4,7 +4,6 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Routes} from 'react-router-dom';
 
 
-import Quality from './components/qualityPage';
 import Footer from './components/footer';
 import Header from './components/header';
 import Home from './components/home';
@@ -16,7 +15,6 @@ function App() {
     <Router>
       <Header/>
           <Routes>
-            <Route path="/quality-page/" element={<Quality/>}/>
             <Route path="/model1/" element={<FirstModel/>}/>
             <Route path="/model2/" element={<SecondModel/>}/>
             <Route exact path="/" element={<Home/>}/>

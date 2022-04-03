@@ -17,6 +17,7 @@ class Quality extends Component {
   render() {
     return (
       <Container className="text-center" fluid>
+        <h1 style={{marginTop: 30}}>Quality information</h1>
         <Row style={{ marginTop: "50px" }}>
           <Col >
             <QualityInfo title={"Basic Overview"} desc={

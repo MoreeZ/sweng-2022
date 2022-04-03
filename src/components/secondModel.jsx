@@ -4,7 +4,8 @@
 
 import axios from "axios";
 import React, { Component } from "react";
-import Features from './features.jsx'
+import Features from './features.jsx';
+import QualityPage2 from './qualityPage2';
 
 class SecondModel extends Component {
   state = {
@@ -41,11 +42,13 @@ class SecondModel extends Component {
   render() {
     return (
       <div style={{display: "flex", flexDirection: "column", "alignItems": "center", minHeight: "80vh"}}>
+        <h1 style={{marginTop: 40}}>XBoost Model</h1>
         <Features modelState={this.state} handlePredict={this.handlePredict} />
         <div style={{ width: 350, padding: 20, backgroundColor: "#212529", borderRadius: 20, color: "white" }}>
           <div style={{ marginBottom: 10 }}>Log error: {this.state.predictData["log error"] ? this.state.predictData["log error"] : null}</div>
           <div>Predicted house price: {this.state.predictData["Prididicted house price"] ? this.state.predictData["Prididicted house price"] : null}</div>
         </div>
+        <QualityPage2/>
       </div>
     )
   }

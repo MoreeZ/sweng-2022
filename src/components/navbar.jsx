@@ -15,14 +15,15 @@ class NavigationBar extends Component {
                             Home
                         </Nav.Link>
                         <Nav.Link href="/model1">
-                            Model One
+                            Ridge regression model
                         </Nav.Link>
                         <Nav.Link href="/model2">
-                            Model Two
+                            Xboost prediction model
                         </Nav.Link>
-                        <Nav.Link href="/quality-page">
+                        {/*  */}
+                        {/* <Nav.Link href="/quality-page">
                             Quality Page
-                        </Nav.Link>
+                        </Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
