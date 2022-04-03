@@ -31,8 +31,8 @@ class Home extends Component {
           <div className="dark-overlay"></div>
           <div className="home-center-content">
             <h1>Housing price prediction model</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget porttitor felis. In a magna felis. Vestibulum viverra placerat nisi, sit amet hendrerit ante volutpat eu. Donec in mauris sapien.</p>
-            <Link to="/model/"><button className="rounded-pill btn bg-primary">Get Started</button></Link>
+            <p>For many families, a house is their most valuable asset. Accurate and up-to-date house evaluation is vital for real-estate stakeholders such as homeowners, buyers, mortgage lenders, agents, etc. House price estimation is traditionally performed by a real estate appraisal based on expert knowledge of target property and surrounding areas historical data, though at a very coarse granularity.</p>
+            <Link to="/model/"><button onClick={null} className="rounded-pill btn bg-primary">Get Started</button></Link>
           </div>
         </div>
         <div className="about-project center-cont">
