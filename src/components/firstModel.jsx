@@ -32,11 +32,13 @@ class FirstModel extends Component {
       bedroomcnt: data.noOfBedrooms,
       finishedsquarefeet12: data.area,
       taxamount: data.taxAmount,
-      yearbuilt: data.yearBuilt
+      yearbuilt: data.yearBuilt,
+      house_price: 0
     }
+
     console.log("HandlePredict");
     // This is where the api call goes via axios.
-    // axios.post("http://127.0.0.1:8000/", postData);
+    axios.post("http://127.0.0.1:8000/predict", postData);
   }
 
   render() {
