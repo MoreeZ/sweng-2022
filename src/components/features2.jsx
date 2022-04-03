@@ -28,9 +28,11 @@ class Features extends Component {
         this.validateString("structuretaxvaluedollarcnt", numberOnlyRegex, numbersOnlyString);
         this.validateString("calculatedfinishedsquarefeet", numberOnlyRegex, numbersOnlyString);
 
-        if (this.state.errorQuantity === 0) {
-            this.props.handlePredict(this.state); // BUG HERE
-        }
+        setTimeout(()=>{ // temporary solution
+            if (this.state.errorQuantity === 0) {
+              this.props.handlePredict(this.state); // BUG HERE
+            }
+          }, 300)
     }
 
     // Function takes in the property, a regular expression and error message

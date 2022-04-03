@@ -25,10 +25,12 @@ class Features extends Component {
     this.validateString("noOfBathrooms", numberOnlyRegex, numbersOnlyString);
     this.validateString("area", numberOnlyRegex, numbersOnlyString);
     this.validateString("house_price", numberOnlyRegex, numbersOnlyString);
-
-    if (this.state.errorQuantity === 0) {
-      this.props.handlePredict(this.state); // BUG HERE
-    }
+    setTimeout(()=>{ // temporary solution
+      if (this.state.errorQuantity === 0) {
+        this.props.handlePredict(this.state); // BUG HERE
+      }
+    }, 300)
+    
   }
 
   // Function takes in the property, a regular expression and error message
