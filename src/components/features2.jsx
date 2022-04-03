@@ -193,7 +193,7 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
-                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Gross Living Area</label>
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Gross Building Area</label>
                         <input
                             name="calculatedfinishedsquarefeet"
                             type="text"
