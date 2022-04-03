@@ -9,14 +9,14 @@ import QualityPage2 from './qualityPage2';
 
 class SecondModel extends Component {
   state = {
-    yearBuilt: "1969",
-    taxAmount: "4542.86",
+    yearBuilt: "2005",
+    taxAmount: "6941.39",
     noOfBathrooms: "2",
-    noOfBedrooms: "3",
-    area: "1476",
-    house_price: "10000",
-    structuretaxvaluedollarcnt: "313",
-    calculatedfinishedsquarefeet: "12",
+    noOfBedrooms: "4",
+    area: "3633",
+    house_price: "223100",
+    structuretaxvaluedollarcnt: "218982",
+    calculatedfinishedsquarefeet: "3633",
     errors: {
       yearBuilt: [],
       taxAmount: [],
