@@ -9,12 +9,12 @@ import Features from './features1.jsx'
 
 class FirstModel extends Component {
   state = {
-    yearBuilt: "2005",
-    taxAmount: "6941.39",
+    yearBuilt: "1959",
+    taxAmount: "6735.88",
     noOfBathrooms: "2",
-    noOfBedrooms: "4",
-    area: "3633",
-    house_price: "223100",
+    noOfBedrooms: "3",
+    area: "1684",
+    house_price: "360900",
     errors: {
       yearBuilt: [],
       taxAmount: [],

@@ -79,6 +79,7 @@ class Features extends Component {
             <>
                 <div className="row m-4">
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>No. of Bedrooms</label>
                         <input
                             name="noOfBedrooms"
                             type="text"
@@ -94,6 +95,7 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>No. of Bathrooms</label>
                         <input
                             name="noOfBathrooms"
                             type="text"
@@ -109,6 +111,7 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Tax Amount ($)</label>
                         <input
                             name="taxAmount"
                             type="text"
@@ -124,6 +127,7 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Year built</label>
                         <input
                             name="yearBuilt"
                             type="text"
@@ -141,6 +145,7 @@ class Features extends Component {
                 </div>
                 <div className="row m-4">
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Finished Living Area</label>
                         <input
                             name="area"
                             type="text"
@@ -156,6 +161,7 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Actual house price</label>
                         <input
                             name="house_price"
                             type="text"
@@ -171,11 +177,12 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Structure assessment value ($)</label>
                         <input
                             name="structuretaxvaluedollarcnt"
                             type="text"
                             className={"form-control rounded-pill" + (this.state.errors.structuretaxvaluedollarcnt.length > 0 ? " error-border" : "")}
-                            placeholder="Actual house price"
+                            placeholder="Rent Tax Amount"
                             aria-label="structuretaxvaluedollarcnt"
                             onChange={this.handleChange}
                             value={this.state.structuretaxvaluedollarcnt}
@@ -186,11 +193,12 @@ class Features extends Component {
                             ))) : null}
                     </div>
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}>Total Living Area</label>
                         <input
                             name="calculatedfinishedsquarefeet"
                             type="text"
                             className={"form-control rounded-pill" + (this.state.errors.calculatedfinishedsquarefeet.length > 0 ? " error-border" : "")}
-                            placeholder="Actual house price"
+                            placeholder="finished area"
                             aria-label="calculatedfinishedsquarefeet"
                             onChange={this.handleChange}
                             value={this.state.calculatedfinishedsquarefeet}
@@ -200,8 +208,9 @@ class Features extends Component {
                                 <div key={i} className="error-msg">{msg}</div>
                             ))) : null}
                     </div>
-                    
+
                     <div className="col">
+                        <label style={{ opacity: 0.7, marginLeft: 15 }}> </label>
                         <button
                             type="submit"
                             style={submitStyle}

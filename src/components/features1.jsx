@@ -76,6 +76,7 @@ class Features extends Component {
     return (
       <div className="row m-4">
         <div className="col">
+          <label style={{ opacity: 0.7, marginLeft: 15 }}>No. of Bedrooms</label>
           <input
             name="noOfBedrooms"
             type="text"
@@ -91,6 +92,7 @@ class Features extends Component {
             ))) : null}
         </div>
         <div className="col">
+          <label style={{ opacity: 0.7, marginLeft: 15 }}>No. of Bathrooms</label>
           <input
             name="noOfBathrooms"
             type="text"
@@ -106,6 +108,7 @@ class Features extends Component {
             ))) : null}
         </div>
         <div className="col">
+          <label style={{ opacity: 0.7, marginLeft: 15 }}>Tax Amount</label>
           <input
             name="taxAmount"
             type="text"
@@ -121,6 +124,7 @@ class Features extends Component {
             ))) : null}
         </div>
         <div className="col">
+          <label style={{ opacity: 0.7, marginLeft: 15 }}>Year built</label>
           <input
             name="yearBuilt"
             type="text"
@@ -136,6 +140,7 @@ class Features extends Component {
             ))) : null}
         </div>
         <div className="col">
+          <label style={{ opacity: 0.7, marginLeft: 15 }}>Finished Area</label>
           <input
             name="area"
             type="text"
@@ -151,6 +156,7 @@ class Features extends Component {
             ))) : null}
         </div>
         <div className="col">
+          <label style={{ opacity: 0.7, marginLeft: 15 }}>Actual house price</label>
           <input
             name="house_price"
             type="text"
@@ -165,7 +171,9 @@ class Features extends Component {
               <div key={i} className="error-msg">{msg}</div>
             ))) : null}
         </div>
-        <div className="col">
+        <div className="col">          
+        <label style={{ opacity: 0.7, marginLeft: 15 }}> </label>
+
           <button
             type="submit"
             style={submitStyle}
