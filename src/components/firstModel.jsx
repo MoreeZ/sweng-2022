@@ -9,12 +9,12 @@ import Features from './features1.jsx'
 
 class FirstModel extends Component {
   state = {
-    yearBuilt: "",
-    taxAmount: "",
-    noOfBathrooms: "",
-    noOfBedrooms: "",
-    area: "",
-    house_price: "",
+    yearBuilt: "1969",
+    taxAmount: "4542.86",
+    noOfBathrooms: "2",
+    noOfBedrooms: "3",
+    area: "1476",
+    house_price: "10000",
     errors: {
       yearBuilt: [],
       taxAmount: [],
@@ -29,18 +29,23 @@ class FirstModel extends Component {
   };
 
   handlePredict = (data) => {
+    console.log("Pressed handlePredict");
     const postData = {
-      bathroomcnt: data.noOfBathrooms,
-      bedroomcnt: data.noOfBedrooms,
-      finishedsquarefeet12: data.area,
-      taxamount: data.taxAmount,
-      yearbuilt: data.yearBuilt,
-      house_price: 0
+      bathroomcnt: parseInt(data.noOfBathrooms),
+      bedroomcnt: parseInt(data.noOfBedrooms),
+      finishedsquarefeet12: parseFloat(data.area),
+      taxamount: parseFloat(data.taxAmount),
+      yearbuilt: parseInt(data.yearBuilt),
+      house_price: parseFloat(data.house_price)
     }
 
     // This is where the api call goes via axios.
     axios.post("http://127.0.0.1:8000/predict", postData).then(res=>{
-      this.setState({predictData: res});
+      console.log("Post Request success");
+      this.setState({predictData: res.data});
+    }).catch(err=>{
+      console.log("Post Request error");
+      console.log(err);
     });
   }
 
@@ -50,7 +55,7 @@ class FirstModel extends Component {
         <h1 style={{marginTop: 40}}>Ridge Regression Model</h1>
         <Features modelState={this.state} handlePredict={this.handlePredict}/>
         <div style={{width: 350, padding: 20, backgroundColor: "#212529", borderRadius: 20, color: "white"}}>
-          <div>Predicted house price: {this.state.predictData["Pridicted house price"] ? this.state.predictData["Prididicted house price"] : null }</div>  
+          <div>Predicted house price: {this.state.predictData["Pridicted house price"] ? "$" + Math.round(this.state.predictData["Pridicted house price"], 2) : null }</div>  
         </div>
         <QualityPage/>
       </div>
