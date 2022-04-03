@@ -8,6 +8,8 @@ import Pshahina from "../images/Shahina.png"
 import Peli from "../images/Eli.jpeg"
 import Poskar from "../images/Oskar.jpeg"
 import Paslinn from "../images/aslinn.png"
+import Ptianze from '../images/Tianze.png'
+
 class Home extends Component {
 
   renderTeamMember = (name, role, image) => {
@@ -45,7 +47,7 @@ class Home extends Component {
             <h1>Our team</h1>
             <Row style={{marginBottom: 40}}>
               <Col>{this.renderTeamMember("Mingwei Shi", "Project Lead", Pmingwei)}</Col>
-              <Col>{this.renderTeamMember("Tianze Zhang", "Backend Developer & Manager", null)}</Col>
+              <Col>{this.renderTeamMember("Tianze Zhang", "Backend Developer & Manager", Ptianze)}</Col>
               <Col>{this.renderTeamMember("Eligijus Skersonas", "Frontend Developer & Manager ", Peli)}</Col>
               <Col>{this.renderTeamMember("Aislinn Smyth", "Frontend Developer & Communication Lead", Paslinn)}</Col>
             </Row>
