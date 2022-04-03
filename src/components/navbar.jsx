@@ -18,7 +18,7 @@ class NavigationBar extends Component {
                             Ridge regression model
                         </Nav.Link>
                         <Nav.Link href="/model2">
-                            Xboost prediction model
+                            XGboost prediction model
                         </Nav.Link>
                         {/*  */}
                         {/* <Nav.Link href="/quality-page">

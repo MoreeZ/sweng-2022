@@ -57,7 +57,7 @@ class SecondModel extends Component {
   render() {
     return (
       <div style={{display: "flex", flexDirection: "column", "alignItems": "center", minHeight: "80vh"}}>
-        <h1 style={{marginTop: 40}}>XBoost Model</h1>
+        <h1 style={{marginTop: 40}}>XGBoost Model</h1>
         <Features modelState={this.state} handlePredict={this.handlePredict} />
         <div style={{ width: 350, padding: 20, backgroundColor: "#212529", borderRadius: 20, color: "white" }}>
           <div>Predicted house price: {this.state.predictData["Pridicted house price"] ? "$" + Math.round(this.state.predictData["Pridicted house price"], 2) : null}</div>
