@@ -11,3 +11,18 @@ We take any regression or classification use case and do our predictions. This i
 - Eligijus Skersonas 
 - Tianze Zhang
 - Shohinabonu Shamshodova 
+
+## Download files
+- Clone the repository using: `git clone https://github.com/MoreeZ/sweng-2022/`
+
+## Backend api run instructions: 
+1. Navigate to restful-api directory `cd restful-api/`
+2. Make sure both python3 and pip are installed on your machine. On linux: `sudo apt install python3 pip`
+3. install third party dependencies for the api (sudo) `pip install fastapi uvicorn pandas`
+4. Run the server: uvicorn main:app --reload
+
+## Frontend run instructions:
+#### You can skip the following steps by accessing the hosted server at https://predict-houseprice.web.app/
+1. Navigate to local repository: `cd front-end/` 
+2. Install all npm packages `npm install`
+3. Start the application: `npm start`
