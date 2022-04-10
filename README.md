@@ -1,7 +1,8 @@
 # Software Engineering Group Project 2022
-## Regression/Classification/Deep learning based models.
+## Regression based model webapp.
+The goal of our project is to create a deep machine learning regression model for a particular dataset, in our case we chose the Zillow housing price prediction dataset. Our project must visualise the results of the model’s house price prediction on a dashboard and must allow for user input.
 
-We take any regression or classification use case and do our predictions. This is easier said than done. We need to follow all the assumptions of the algorithm that we use. We need to use various algorithms, stacking models. tons of parameter tunings and model use various model evaluation tests. I personally would go for regression model. Note: In all the models, based on the use case chosen a dashboard needs to be created.
+A key feature that our client wanted us to have in our project, was two separate graphs. One being the visualisation of the house price prediction, this is aimed at non-technical users, and the other being a model quality page for technical users. The model’s quality page determines the level of accuracy of our regression model. Ultimately, we would anticipate that our project will allow users to get high quality and accurate house price predictions.
 
 ## Group members:
 - Oskar Mroz
