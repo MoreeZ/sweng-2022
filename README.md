@@ -19,7 +19,7 @@ We take any regression or classification use case and do our predictions. This i
 1. Navigate to restful-api directory `cd restful-api/`
 2. Make sure both python3 and pip are installed on your machine. On linux: `sudo apt install python3 pip`
 3. install third party dependencies for the api (sudo) `pip install fastapi uvicorn pandas`
-4. Run the server: uvicorn main:app --reload
+4. Run the server: `uvicorn main:app --reload`
 
 ## Frontend run instructions:
 #### You can skip the following steps by accessing the hosted server at https://predict-houseprice.web.app/
