@@ -4,11 +4,11 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Routes} from 'react-router-dom';
 
 
-import Footer from './components/footer';
-import Header from './components/header';
-import Home from './components/home';
-import FirstModel from "./components/firstModel";
-import SecondModel from "./components/secondModel";
+import Footer from './components/global/footer';
+import Header from './components/global/header';
+import Home from './components/homepage/home';
+import FirstModel from "./components/firstModel/firstModel";
+import SecondModel from "./components/secondModel/secondModel";
 
 function App() {
   return (

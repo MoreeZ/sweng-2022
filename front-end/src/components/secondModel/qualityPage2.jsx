@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from 'react-bootstrap';
-import QualityInfo from './QualityInfo.jsx';
+import QualityInfo from '../reusable/QualityInfo.jsx';
 
-import modelStacking from '../images/model_stacking_2.png';
-import logerror2 from '../images/logerror2.png';
-import FeatureImportance from '../images/feature_importance_2.png'
+import modelStacking from '../../images/model_stacking_2.png';
+import logerror2 from '../../images/logerror2.png';
+import FeatureImportance from '../../images/feature_importance_2.png'
 
 // The following component contains the contents  of the quality page.
 // The component is divided into 3 rows. First two rows have 2 columns.

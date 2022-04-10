@@ -1,15 +1,15 @@
-import "../styles/home.css";
+import "../../styles/home.css";
 import React, { Component } from "react";
 import { Row, Col } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
-import Pmingwei from "../images/Mingwei.png"
-import Pshahina from "../images/Shahina.png"
-import Peli from "../images/Eli.jpeg"
-import Poskar from "../images/Oskar.jpeg"
-import Paslinn from "../images/aslinn.png"
-import Ptianze from '../images/Tianze.png'
-import Porhan from '../images/serialkiller.jpg'
+import Pmingwei from "../../images/Mingwei.png"
+import Pshahina from "../../images/Shahina.png"
+import Peli from "../../images/Eli.jpeg"
+import Poskar from "../../images/Oskar.jpeg"
+import Paslinn from "../../images/aslinn.png"
+import Ptianze from '../../images/Tianze.png'
+import Porhan from '../../images/serialkiller.jpg'
 
 class Home extends Component {
 

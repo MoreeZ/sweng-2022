@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from 'react-bootstrap';
-import QualityInfo from './QualityInfo.jsx';
+import QualityInfo from '../reusable/QualityInfo.jsx';
 
-import featureSelection from '../images/FeatureSelectionResults.png';
-import logerrorFitted from '../images/Fitted_graph.png';
-import meanSqErr from '../images/mean_square_error.png';
-import L1Explanation from '../images/L1Explanation.jpg';
-import QQplot from '../images/QQPlot.png';
+import featureSelection from '../../images/FeatureSelectionResults.png';
+import logerrorFitted from '../../images/Fitted_graph.png';
+import meanSqErr from '../../images/mean_square_error.png';
+import L1Explanation from '../../images/L1Explanation.jpg';
+import QQplot from '../../images/QQPlot.png';
 
 // The following component contains the contents  of the quality page.
 // The component is divided into 3 rows. First two rows have 2 columns.
