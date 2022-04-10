@@ -1,13 +1,13 @@
-# Software Engineering Group Project 2022
-## Regression/Classification/Deep learning based models.
+# REST API
+#### This API must be used ran for the website to function properly.
 
-We take any regression or classification use case and do our predictions. This is easier said than done. We need to follow all the assumptions of the algorithm that we use. We need to use various algorithms, stacking models. tons of parameter tunings and model use various model evaluation tests. I personally would go for regression model. Note: In all the models, based on the use case chosen a dashboard needs to be created.
-
-## Group members:
-- Oskar Mroz
-- Aislinn Smyth 
-- Mingwei Shi
-- Ódhran Mulvihill
-- Eligijus Skersonas 
+## Contributors:
 - Tianze Zhang
-- Shohinabonu Shamshodova 
+- Mingwei Shi
+- Oskar Mroz
+
+## Run instructions: 
+1. Navigate to restful-api directory `cd restful-api/`
+2. Make sure both python3 and pip are installed on your machine. On linux: `sudo apt install python3 pip`
+3. install third party dependencies for the api (sudo) `pip install fastapi uvicorn pandas`
+4. Run the server: uvicorn main:app --reload
